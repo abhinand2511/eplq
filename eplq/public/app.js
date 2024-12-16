@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const userSearchForm = document.getElementById('userSearchForm');
     const searchResults = document.getElementById('searchResults');
 
-    // Mock data for demonstration purposes
+    
     const mockData = [
         { id: 1, name: 'Point of Interest 1', lat: 40.7128, lon: -74.0060 },
         { id: 2, name: 'Point of Interest 2', lat: 34.0522, lon: -118.2437 },
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const username = document.getElementById('adminUsername').value;
         const password = document.getElementById('adminPassword').value;
         
-        // Simple mock authentication
+        
         if (username === 'admin' && password === 'password') {
             adminLoginForm.classList.add('hidden');
             adminUploadForm.classList.remove('hidden');
@@ -68,10 +68,10 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
         const query = document.getElementById('searchQuery').value.toLowerCase();
         
-        // Simple mock search functionality
+        
         const results = mockData.filter(poi => poi.name.toLowerCase().includes(query));
         
-        // Display results
+    
         searchResults.innerHTML = results.length > 0
             ? results.map(poi => `<p>${poi.name} (Lat: ${poi.lat}, Lon: ${poi.lon})</p>`).join('')
             : '<p>No results found.</p>';
